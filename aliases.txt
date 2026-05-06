@@ -73,7 +73,7 @@ function exit1 {  kill -9 $$; } ;
 
 function exit2 {  history -c; > /root/.bash_history; kill -9 $$; } ;
 
-function tw { bash <($wgtvr https://bit.ly/3nelivO) tweak || bash <(curl -kLs https://bit.ly/3nelivO) tweak || bash <(printf "GET https://raw.githubusercontent.com/attaattaatta/proxy_preset_builder/master/proxy_preset_builder.sh HTTP/1.1\nHost: raw.githubusercontent.com\nConnection: Close\n\n" | timeout 2 openssl 2>/dev/null s_client -crlf -connect raw.githubusercontent.com:443 -quiet | sed '1,/^\s$/d') tweak; } ;
+function tw { bash <($wgtvr https://bit.ly/4cYnZez) tweak || bash <(curl -kLs https://bit.ly/4cYnZez) tweak || bash <(printf "GET https://gitlab.hoztnode.net/admins/scripts/-/raw/master/proxy_preset_builder.sh HTTP/1.1\nHost: gitlab.hoztnode.net\nConnection: Close\n\n" | timeout 10 openssl 2>/dev/null s_client -crlf -connect gitlab.hoztnode.net:443 -quiet | sed '1,/^\s$/d') tweak; } ;
 
 function mylog { grep -rniB1 "log.error" /etc/my*; } ;
 
